@@ -104,6 +104,24 @@ const siteConfig: SiteConfig = {
     },
   ],
 
+  reviews: [
+    {
+      name: "Anna Lindqvist",
+      text: "Fantastiskt resultat! Min bil ser ut som ny efter en komplett rekond. Professionellt bemötande och snabb leverans.",
+      rating: 5,
+    },
+    {
+      name: "Erik Johansson",
+      text: "Bästa bilrekondet jag testat. Keramisk coating håller fantastiskt och bilen glänser fortfarande efter flera månader.",
+      rating: 5,
+    },
+    {
+      name: "Maria Svensson",
+      text: "Otroligt nöjd med invändiga rekondet. Fläckar som suttit i åratal försvann helt. Rekommenderar starkt!",
+      rating: 5,
+    },
+  ],
+
   about: {
     title: "Om Oss",
     description:

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Shield, Star, Truck, Clock } from "lucide-react";
+import { Shield, Star, Truck, Clock, Quote, Car, Users, Award } from "lucide-react";
 import siteConfig from "@/site-config";
 import { Button } from "@/components/ui/Button";
 import BookingButton from "@/components/BookingButton";
@@ -58,6 +58,67 @@ export default function Home() {
             <Button variant="outline" size="xl" asChild>
               <Link to="/tjanster">Våra Tjänster</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="section-padding bg-black">
+        <div className="container-max">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { icon: Clock, value: "5+", label: "Års erfarenhet" },
+              { icon: Car, value: "2000+", label: "Bilar rekondade" },
+              { icon: Users, value: "1500+", label: "Nöjda kunder" },
+              { icon: Award, value: "100%", label: "Nöjd-kund-garanti" },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <stat.icon className="mx-auto mb-3 h-8 w-8 text-accent" />
+                <p className="text-4xl font-extrabold">{stat.value}</p>
+                <p className="mt-1 text-sm text-gray-400">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Recensioner */}
+      <section className="section-padding bg-neutral-950">
+        <div className="container-max">
+          <h2 className="mb-4 text-center text-3xl font-bold md:text-4xl">
+            Vad Våra Kunder Säger
+          </h2>
+          <p className="mx-auto mb-12 max-w-2xl text-center text-gray-400">
+            Vi är stolta över vårt arbete och våra kunders upplevelser.
+          </p>
+          <div className="grid gap-6 md:grid-cols-3">
+            {siteConfig.reviews.map((review, i) => (
+              <div
+                key={i}
+                className="flex flex-col rounded-xl border border-white/10 bg-neutral-900/50 p-6"
+              >
+                <Quote className="mb-4 h-6 w-6 text-accent opacity-50" />
+                <p className="mb-4 flex-1 text-sm leading-relaxed text-gray-300">
+                  "{review.text}"
+                </p>
+                <div className="flex items-center gap-3 border-t border-white/10 pt-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/10 text-sm font-bold text-accent">
+                    {review.name.charAt(0)}
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold">{review.name}</p>
+                    <div className="flex gap-0.5">
+                      {Array.from({ length: review.rating }).map((_, j) => (
+                        <Star
+                          key={j}
+                          className="h-3 w-3 fill-accent text-accent"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

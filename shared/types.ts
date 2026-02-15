@@ -26,6 +26,12 @@ export interface SocialLink {
   icon: string;
 }
 
+export interface Review {
+  name: string;
+  text: string;
+  rating: number;
+}
+
 export interface SiteConfig {
   brand: {
     name: string;
@@ -43,6 +49,7 @@ export interface SiteConfig {
   };
   services: Service[];
   gallery: GalleryItem[];
+  reviews: Review[];
   about: {
     title: string;
     description: string;
