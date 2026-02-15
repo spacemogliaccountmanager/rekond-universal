@@ -11,7 +11,7 @@ import type { SiteConfig } from "@shared/types";
 const siteConfig: SiteConfig = {
   brand: {
     name: "",
-    logo: "",
+    logo: "/images/logo.svg",
     favicon: "/images/favicon.svg",
     primaryColor: "#111111",
     primaryColorDark: "#000000",

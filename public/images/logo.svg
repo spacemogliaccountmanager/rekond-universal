@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
-  <rect width="50" height="50" rx="8" fill="#c9a84c"/>
-  <text x="25" y="33" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#0f2440" text-anchor="middle">BR</text>
+
+<svg width="25px" height="27px" viewBox="0 0 25 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-100" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M22,24 L22,8 L3,8 L3,24 L22,24 L22,24 Z M18.0555556,0 L20.8333333,0 L20.8333333,2.7 L22.2222222,2.7 C23.7563465,2.7 25,3.90883118 25,5.4 L25,24.3 C25,25.7911688 23.7563465,27 22.2222222,27 L2.77777778,27 C1.23611111,27 0,25.785 0,24.3 L0,5.4 C0,3.9015 1.23611111,2.7 2.77777778,2.7 L4.16666667,2.7 L4.16666667,0 L6.94444444,0 L6.94444444,2.7 L18.0555556,2.7 L18.0555556,0 L18.0555556,0 Z M11.125,10.5 L13.875,10.5 L13.875,14.625 L18,14.625 L18,17.375 L13.875,17.375 L13.875,21.5 L11.125,21.5 L11.125,17.375 L7,17.375 L7,14.625 L11.125,14.625 L11.125,10.5 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+    </g>
 </svg>
