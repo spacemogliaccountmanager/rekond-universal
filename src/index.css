@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand: #1e3a5f;
+  --color-brand-dark: #0f2440;
+  --color-accent: #c9a84c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 py-16 md:px-8 lg:py-24;
+  }
+
+  .container-max {
+    @apply mx-auto max-w-7xl;
+  }
+}
