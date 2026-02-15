@@ -40,13 +40,13 @@ export default function Home() {
       </Helmet>
 
       {/* Hero */}
-      <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden">
+      <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden pt-0 md:pt-0 -mt-8 md:mt-0">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${hero.backgroundImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black" />
-        <div className="relative z-10 px-4 text-center">
+        <div className="relative z-10 -mt-24 px-4 text-center md:mt-0">
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
             {hero.title}
           </h1>
@@ -59,13 +59,8 @@ export default function Home() {
               <Link to="/tjanster">Våra Tjänster</Link>
             </Button>
           </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="section-padding bg-black">
-        <div className="container-max">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Stats inline */}
+          <div className="mt-10 flex flex-row items-center justify-center gap-5 sm:gap-12 lg:gap-20">
             {[
               { icon: Clock, value: "5+", label: "Års erfarenhet" },
               { icon: Car, value: "2000+", label: "Bilar rekondade" },
@@ -73,9 +68,9 @@ export default function Home() {
               { icon: Award, value: "100%", label: "Nöjd-kund-garanti" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <stat.icon className="mx-auto mb-3 h-8 w-8 text-accent" />
-                <p className="text-4xl font-extrabold">{stat.value}</p>
-                <p className="mt-1 text-sm text-gray-400">{stat.label}</p>
+                <stat.icon className="mx-auto mb-1 h-5 w-5 text-accent sm:h-7 sm:w-7" />
+                <p className="text-xl font-extrabold sm:text-3xl">{stat.value}</p>
+                <p className="mt-0.5 text-[10px] text-gray-300 sm:text-xs">{stat.label}</p>
               </div>
             ))}
           </div>
