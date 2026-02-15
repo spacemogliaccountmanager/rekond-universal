@@ -45,7 +45,7 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${hero.backgroundImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-950/70 via-gray-950/50 to-gray-950" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black" />
         <div className="relative z-10 px-4 text-center">
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
             {hero.title}
@@ -63,13 +63,13 @@ export default function Home() {
       </section>
 
       {/* USPs */}
-      <section className="section-padding bg-gray-950">
+      <section className="section-padding bg-black">
         <div className="container-max">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {usps.map((usp) => (
               <div
                 key={usp.title}
-                className="flex flex-col items-center rounded-xl border border-gray-800 bg-gray-900/50 p-6 text-center"
+                className="flex flex-col items-center rounded-xl border border-white/10 bg-neutral-900/50 p-6 text-center"
               >
                 <div className="mb-4 rounded-full bg-accent/10 p-3">
                   <usp.icon className="h-6 w-6 text-accent" />
@@ -83,7 +83,7 @@ export default function Home() {
       </section>
 
       {/* Featured services */}
-      <section className="section-padding bg-gray-900/30">
+      <section className="section-padding bg-neutral-950">
         <div className="container-max">
           <h2 className="mb-4 text-center text-3xl font-bold md:text-4xl">
             Våra Tjänster

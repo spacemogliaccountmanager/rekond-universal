@@ -11,14 +11,20 @@ export default function Footer() {
   const { contact, footer, brand } = siteConfig;
 
   return (
-    <footer className="border-t border-gray-800 bg-gray-950">
+    <footer className="border-t border-white/10 bg-black">
       <div className="container-max px-4 py-12 md:px-8">
         <div className="grid gap-8 md:grid-cols-3">
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-3">
-              <img src={brand.logo} alt={brand.name} className="h-8 w-auto" />
-              <span className="text-lg font-bold">{brand.name}</span>
+              {brand.logo ? (
+                <img src={brand.logo} alt={brand.name} className="h-8 w-auto" />
+              ) : (
+                <span className="rounded-md border border-gray-600 bg-gray-800 px-3 py-1 text-sm text-gray-400">
+                  Din Logga
+                </span>
+              )}
+              {brand.name && <span className="text-lg font-bold">{brand.name}</span>}
             </Link>
             <p className="mt-4 text-sm text-gray-400">
               Professionell bilrekond med fokus på kvalitet och kundnöjdhet.
@@ -94,7 +100,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
+        <div className="mt-10 border-t border-white/10 pt-6 text-center text-xs text-gray-500">
           {footer.text}
         </div>
       </div>

@@ -8,7 +8,7 @@ export function Card({
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-xl border border-gray-800 bg-gray-900",
+        "overflow-hidden rounded-xl border border-white/10 bg-neutral-900",
         className,
       )}
       {...props}

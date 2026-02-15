@@ -17,7 +17,7 @@ export default function Services() {
       </Helmet>
 
       {/* Page header */}
-      <section className="section-padding bg-gray-900/30">
+      <section className="section-padding bg-neutral-950">
         <div className="container-max text-center">
           <h1 className="text-4xl font-bold md:text-5xl">Våra Tjänster</h1>
           <p className="mx-auto mt-4 max-w-2xl text-gray-400">

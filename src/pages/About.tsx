@@ -13,7 +13,7 @@ export default function About() {
         <meta name="description" content={about.description.slice(0, 160)} />
       </Helmet>
 
-      <section className="section-padding bg-gray-900/30">
+      <section className="section-padding bg-neutral-950">
         <div className="container-max text-center">
           <h1 className="text-4xl font-bold md:text-5xl">{about.title}</h1>
         </div>
@@ -23,7 +23,7 @@ export default function About() {
         <div className="container-max">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             {/* Image */}
-            <div className="overflow-hidden rounded-xl border border-gray-800">
+            <div className="overflow-hidden rounded-xl border border-white/10">
               <img
                 src={about.image}
                 alt="Om oss"

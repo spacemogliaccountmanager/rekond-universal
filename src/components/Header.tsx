@@ -17,18 +17,26 @@ export default function Header() {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-gray-800/50 bg-gray-950/90 backdrop-blur-md">
+    <header className="fixed top-0 z-50 w-full border-b border-white/10/50 bg-black/95 backdrop-blur-md">
       <div className="container-max flex h-16 items-center justify-between px-4 md:h-20">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
-          <img
-            src={siteConfig.brand.logo}
-            alt={siteConfig.brand.name}
-            className="h-8 w-auto md:h-10"
-          />
-          <span className="text-lg font-bold tracking-tight">
-            {siteConfig.brand.name}
-          </span>
+          {siteConfig.brand.logo ? (
+            <img
+              src={siteConfig.brand.logo}
+              alt={siteConfig.brand.name}
+              className="h-8 w-auto md:h-10"
+            />
+          ) : (
+            <span className="rounded-md border border-gray-600 bg-gray-800 px-3 py-1 text-sm text-gray-400">
+              Din Logga
+            </span>
+          )}
+          {siteConfig.brand.name && (
+            <span className="text-lg font-bold tracking-tight">
+              {siteConfig.brand.name}
+            </span>
+          )}
         </Link>
 
         {/* Desktop nav */}
@@ -63,7 +71,7 @@ export default function Header() {
 
       {/* Mobile nav */}
       {mobileOpen && (
-        <nav className="border-t border-gray-800 bg-gray-950 px-4 pb-4 md:hidden">
+        <nav className="border-t border-white/10 bg-black px-4 pb-4 md:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.to}

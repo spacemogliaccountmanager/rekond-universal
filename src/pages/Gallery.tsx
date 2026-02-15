@@ -19,7 +19,7 @@ export default function Gallery() {
         />
       </Helmet>
 
-      <section className="section-padding bg-gray-900/30">
+      <section className="section-padding bg-neutral-950">
         <div className="container-max text-center">
           <h1 className="text-4xl font-bold md:text-5xl">Galleri</h1>
           <p className="mx-auto mt-4 max-w-2xl text-gray-400">
@@ -34,7 +34,7 @@ export default function Gallery() {
             {gallery.map((item) => (
               <div
                 key={item.id}
-                className="group cursor-pointer overflow-hidden rounded-xl border border-gray-800 bg-gray-900"
+                className="group cursor-pointer overflow-hidden rounded-xl border border-white/10 bg-neutral-900"
                 onClick={() => toggle(item.id)}
               >
                 <div className="relative aspect-video overflow-hidden">

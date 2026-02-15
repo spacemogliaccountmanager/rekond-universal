@@ -10,11 +10,11 @@ import type { SiteConfig } from "@shared/types";
  */
 const siteConfig: SiteConfig = {
   brand: {
-    name: "Premium Bilrekond",
-    logo: "/images/logo.svg",
+    name: "",
+    logo: "",
     favicon: "/images/favicon.svg",
-    primaryColor: "#1e3a5f",
-    primaryColorDark: "#0f2440",
+    primaryColor: "#111111",
+    primaryColorDark: "#000000",
     accentColor: "#c9a84c",
   },
 

@@ -32,7 +32,7 @@ export default function ContactForm() {
   const onSubmit = (data: FormValues) => mutation.mutate(data);
 
   const inputClass =
-    "w-full rounded-lg border border-gray-700 bg-gray-800 px-4 py-3 text-sm text-white placeholder-gray-500 transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent";
+    "w-full rounded-lg border border-white/10 bg-black px-4 py-3 text-sm text-white placeholder-gray-500 transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent";
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">

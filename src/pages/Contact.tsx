@@ -16,7 +16,7 @@ export default function Contact() {
         />
       </Helmet>
 
-      <section className="section-padding bg-gray-900/30">
+      <section className="section-padding bg-neutral-950">
         <div className="container-max text-center">
           <h1 className="text-4xl font-bold md:text-5xl">Kontakta Oss</h1>
           <p className="mx-auto mt-4 max-w-2xl text-gray-400">
@@ -89,7 +89,7 @@ export default function Contact() {
             </div>
 
             {/* Form */}
-            <div className="rounded-xl border border-gray-800 bg-gray-900/50 p-6 md:p-8">
+            <div className="rounded-xl border border-white/10 bg-neutral-900/50 p-6 md:p-8">
               <h2 className="mb-6 text-2xl font-bold">Skicka ett meddelande</h2>
               <ContactForm />
             </div>
