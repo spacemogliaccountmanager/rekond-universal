@@ -43,7 +43,7 @@ export default function Gallery() {
                       showAfter[item.id] ? item.after : item.before
                     }
                     alt={item.caption}
-                    className="h-full w-full object-cover transition-all duration-500"
+                    className="h-full w-full object-contain bg-black transition-all duration-500"
                   />
                   <div className="absolute left-3 top-3 rounded-md bg-black/70 px-3 py-1 text-xs font-semibold uppercase tracking-wider">
                     {showAfter[item.id] ? "Efter" : "Före"}
