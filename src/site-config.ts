@@ -11,7 +11,7 @@ import type { SiteConfig } from "@shared/types";
 const siteConfig: SiteConfig = {
   brand: {
     name: "",
-    logo: "/images/logo.svg",
+    logo: "/images/logo.webp",
     favicon: "/images/favicon.svg",
     primaryColor: "#111111",
     primaryColorDark: "#000000",
@@ -79,28 +79,10 @@ const siteConfig: SiteConfig = {
 
   gallery: [
     {
-      id: "1",
-      before: "/images/gallery/before-1.jpg",
-      after: "/images/gallery/after-1.jpg",
-      caption: "Komplett rekond – BMW 3-serie",
-    },
-    {
       id: "2",
       before: "/images/gallery/before-2.jpg",
       after: "/images/gallery/after-2.jpg",
       caption: "Lackrenovering – Volvo XC60",
-    },
-    {
-      id: "3",
-      before: "/images/gallery/before-3.jpg",
-      after: "/images/gallery/after-3.jpg",
-      caption: "Invändig rekond – Mercedes C-klass",
-    },
-    {
-      id: "4",
-      before: "/images/gallery/before-4.jpg",
-      after: "/images/gallery/after-4.jpg",
-      caption: "Keramisk coating – Audi A4",
     },
   ],
 
@@ -126,7 +108,7 @@ const siteConfig: SiteConfig = {
     title: "Om Oss",
     description:
       "Med över 10 års erfarenhet inom bilrekond levererar vi resultat i toppklass. Vi använder enbart premiumproduker och de senaste teknikerna för att ge din bil den bästa behandlingen möjligt. Vårt team av certifierade specialister brinner för bilar och detaljer.",
-    image: "/images/about.jpg",
+    image: "/images/services/about.jpg",
     features: [
       "Certifierade specialister",
       "Premiumproduker",

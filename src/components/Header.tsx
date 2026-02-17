@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import siteConfig from "@/site-config";
@@ -14,10 +14,24 @@ const navLinks = [
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-white/10/50 bg-black/95 backdrop-blur-md">
+    <header
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+        scrolled
+          ? "border-b border-white/10 bg-black/60 backdrop-blur-xl"
+          : "bg-transparent"
+      }`}
+    >
       <div className="container-max flex h-16 items-center justify-between px-4 md:h-20">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
@@ -25,7 +39,7 @@ export default function Header() {
             <img
               src={siteConfig.brand.logo}
               alt={siteConfig.brand.name}
-              className="h-8 w-auto md:h-10"
+              className="h-14 w-auto md:h-16"
             />
           ) : (
             <span className="rounded-md border border-gray-600 bg-gray-800 px-3 py-1 text-sm text-gray-400">
@@ -54,7 +68,7 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <div className="ml-4">
+          <div className="ml-4 font-extrabold">
             <BookingButton size="default" />
           </div>
         </nav>
@@ -77,7 +91,7 @@ export default function Header() {
               key={link.to}
               to={link.to}
               onClick={() => setMobileOpen(false)}
-              className={`block rounded-md px-4 py-3 text-sm font-medium transition-colors hover:bg-white/10 ${
+              className={`block rounded-md px-2 py-3 text-sm font-medium transition-colors hover:bg-white/10 ${
                 location.pathname === link.to
                   ? "text-accent"
                   : "text-gray-300"
@@ -86,7 +100,7 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <div className="mt-3 px-4">
+          <div className="mt-4 px-4">
             <BookingButton size="default" className="w-full" />
           </div>
         </nav>
